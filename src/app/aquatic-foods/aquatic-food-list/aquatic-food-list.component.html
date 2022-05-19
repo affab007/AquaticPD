@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-succsess">New Aquatic Food</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 ">
+    <a class="list-group-item clearfix" href="" *ngFor="let foodList of aquaticfood">
+    <div class="float-start ">
+      <span>
+      <h4 class="list-group-item-heading">{{foodList.name}}</h4>
+      <p class="list-group-item-text">Decription</p>
+    </span>
+    </div>
+    <div class="float-end border">
+      <img
+      src={{foodList.imagePath}}
+      alt={{foodList.name}}
+      class="img-responsive"
+      style="max-width:50px;">
+    </div>
+    </a>
+  </div>
+</div>
