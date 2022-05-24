@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aquatic-foods.component.css']
 })
 export class AquaticFoodsComponent implements OnInit {
+  openDescription!:{name: string, description:string, imagePath: string};
+  check:boolean = false;
+
+  valueDescription(openDescrip:any){
+    this.openDescription = openDescrip;
+    this.check = true;
+  }
 
   constructor() { }
 

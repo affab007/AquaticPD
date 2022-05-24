@@ -1,1 +1,15 @@
-<p>aquatic-food-item works!</p>
+<a class="list-group-item clearfix" href="#" (click)="emitDescription()">
+  <div class="float-start ">
+    <span>
+    <h4 class="list-group-item-heading">{{foodList.name}}</h4>
+    <p class="list-group-item-text">{{foodList.description}}</p>
+  </span>
+  </div>
+  <div class="float-end border">
+    <img
+    src={{foodList.imagePath}}
+    alt={{foodList.name}}
+    class="img-responsive"
+    style="max-width:50px;">
+  </div>
+  </a>

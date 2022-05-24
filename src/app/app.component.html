@@ -1,17 +1,12 @@
-<app-header></app-header>
+<app-header (openAquaticFood)="openAquaticFoods($event)"></app-header>
 <div class="container">
-  <div class="row">
+  <div class="row" >
     <div class="col-md-12">
-     <app-aquatic-foods></app-aquatic-foods>
+     <app-aquatic-foods *ngIf="A === 'Aquatic'"></app-aquatic-foods>
+     <app-distribution-list *ngIf="A === 'Distribution'"></app-distribution-list>
     </div>
   </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-12">
-      <app-distribution-list></app-distribution-list>
-    </div>
-  </div>
-</div>
+
 
 
 

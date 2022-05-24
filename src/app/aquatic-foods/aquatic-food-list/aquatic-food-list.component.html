@@ -5,20 +5,8 @@
 </div>
 <div class="row">
   <div class="col-12 ">
-    <a class="list-group-item clearfix" href="" *ngFor="let foodList of aquaticfood">
-    <div class="float-start ">
-      <span>
-      <h4 class="list-group-item-heading">{{foodList.name}}</h4>
-      <p class="list-group-item-text">Decription</p>
-    </span>
-    </div>
-    <div class="float-end border">
-      <img
-      src={{foodList.imagePath}}
-      alt={{foodList.name}}
-      class="img-responsive"
-      style="max-width:50px;">
-    </div>
-    </a>
+    <app-aquatic-food-item
+    *ngFor="let item of aquaticfood" [foodList]="item"
+    (openDescription)="valueDescription($event)"></app-aquatic-food-item>
   </div>
 </div>

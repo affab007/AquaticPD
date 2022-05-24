@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AquaticFood } from '../AquaticFood.model';
 
 @Component({
@@ -7,6 +7,10 @@ import { AquaticFood } from '../AquaticFood.model';
   styleUrls: ['./aquatic-food-list.component.css']
 })
 export class AquaticFoodListComponent implements OnInit {
+  @Output() openDescription = new EventEmitter<string>();
+
+  information : string ="";
+
   aquaticfood:AquaticFood[] = [
     new AquaticFood("ปลาอินทรี",
     "This is a test",
@@ -17,6 +21,11 @@ export class AquaticFoodListComponent implements OnInit {
     "https://www.foodproject.co.th/images/product/Whole_Squid.jpg"
     )
   ];
+
+  valueDescription(data:any){
+    this.information = data
+    this.openDescription.emit(this.information)
+  }
 
   constructor() { }
 
