@@ -1,15 +1,15 @@
 <form>
   <div class="row mb-2">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Aquatic name">
+      <input type="text" class="form-control" placeholder="Aquatic name" #aquaticInput>
     </div>
     <div class="col">
-      <input type="number" class="form-control" placeholder="Qty">
+      <input type="number" class="form-control" placeholder="Qty" #qtyInput>
     </div>
   </div>
   <div class="row mb-2">
     <div class="col">
-      <button type="button" class="btn btn-success me-2">add</button>
+      <button type="button" class="btn btn-success me-2" (click)="addProductEdit()">add</button>
       <button type="button" class="btn btn-warning me-2">update</button>
       <button type="button" class="btn btn-primary ">clear</button>
     </div>
