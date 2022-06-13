@@ -10,6 +10,9 @@ import { DistributionListComponent } from './distribution-list/distribution-list
 import { AquaticFoodListComponent } from './aquatic-foods/aquatic-food-list/aquatic-food-list.component';
 import { AquaticFoodDetailComponent } from './aquatic-foods/aquatic-food-detail/aquatic-food-detail.component';
 import { AquaticFoodItemComponent } from './aquatic-foods/aquatic-food-item/aquatic-food-item.component';
+import { DropdownDirective } from './aquatic-foods/aquatic-food-detail/dropdown.directive';
+import { Aquatics } from './Service/aquatics.service';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,14 @@ import { AquaticFoodItemComponent } from './aquatic-foods/aquatic-food-item/aqua
     DistributionListComponent,
     AquaticFoodListComponent,
     AquaticFoodDetailComponent,
-    AquaticFoodItemComponent
+    AquaticFoodItemComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [Aquatics],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

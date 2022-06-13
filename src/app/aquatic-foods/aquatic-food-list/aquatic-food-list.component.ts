@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { AquaticFood } from '../AquaticFood.model';
+import { Aquatics } from 'src/app/Service/aquatics.service';
 
 @Component({
   selector: 'app-aquatic-food-list',
@@ -11,25 +11,17 @@ export class AquaticFoodListComponent implements OnInit {
 
   information : string ="";
 
-  aquaticfood:AquaticFood[] = [
-    new AquaticFood("ปลาอินทรี",
-    "This is a test",
-    "https://www.kasethub.co.th/pic/bigpic/2966b237f087e4b9e4d08014a6d96681.jpg"
-    ),
-    new AquaticFood("ปลาหมึก",
-    "This is a test",
-    "https://www.foodproject.co.th/images/product/Whole_Squid.jpg"
-    )
-  ];
+  aquaticfood = this.aquatics.aquaticfood
 
   valueDescription(data:any){
     this.information = data
     this.openDescription.emit(this.information)
   }
 
-  constructor() { }
+  constructor(private aquatics:Aquatics) {}
 
   ngOnInit(): void {
+
   }
 
 }
